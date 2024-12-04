@@ -1,0 +1,574 @@
+{
+  "multiples-bizbuysell-11-24": [
+    {
+      "industry_sector": "Auto Repair and Service Shops",
+      "revenue_multiple": 0.63,
+      "cash_flow_multiple": 2.79
+    },
+    {
+      "industry_sector": "Car Dealerships",
+      "revenue_multiple": 0.43,
+      "cash_flow_multiple": 3.0
+    },
+    {
+      "industry_sector": "Car Washes",
+      "revenue_multiple": 1.96,
+      "cash_flow_multiple": 5.07
+    },
+    {
+      "industry_sector": "Equipment Rental and Dealers",
+      "revenue_multiple": 0.87,
+      "cash_flow_multiple": 2.88
+    },
+    {
+      "industry_sector": "Gas Stations",
+      "revenue_multiple": 0.44,
+      "cash_flow_multiple": 3.55
+    },
+    {
+      "industry_sector": "Junk and Salvage Yards",
+      "revenue_multiple": 0.86,
+      "cash_flow_multiple": 4.05
+    },
+    {
+      "industry_sector": "Marine/Boat Service and Dealers",
+      "revenue_multiple": 0.57,
+      "cash_flow_multiple": 2.75
+    },
+    {
+      "industry_sector": "Towing Companies",
+      "revenue_multiple": 0.9,
+      "cash_flow_multiple": 3.2
+    },
+    {
+      "industry_sector": "Truck Stops",
+      "revenue_multiple": 0.41,
+      "cash_flow_multiple": 3.2
+    },
+    {
+      "industry_sector": "Hair Salons and Barber Shops",
+      "revenue_multiple": 0.48,
+      "cash_flow_multiple": 1.94
+    },
+    {
+      "industry_sector": "Massage Businesses",
+      "revenue_multiple": 0.45,
+      "cash_flow_multiple": 2.13
+    },
+    {
+      "industry_sector": "Nail Salons",
+      "revenue_multiple": 0.42,
+      "cash_flow_multiple": 1.6
+    },
+    {
+      "industry_sector": "Spas",
+      "revenue_multiple": 0.61,
+      "cash_flow_multiple": 2.32
+    },
+    {
+      "industry_sector": "Tanning Salons",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.25
+    },
+    {
+      "industry_sector": "Building Material and Hardware Stores",
+      "revenue_multiple": 0.54,
+      "cash_flow_multiple": 3.14
+    },
+    {
+      "industry_sector": "Concrete Businesses",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.36
+    },
+    {
+      "industry_sector": "Electrical and Mechanical Contracting Businesses",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.53
+    },
+    {
+      "industry_sector": "Heavy Construction Businesses",
+      "revenue_multiple": 0.54,
+      "cash_flow_multiple": 2.62
+    },
+    {
+      "industry_sector": "HVAC Businesses",
+      "revenue_multiple": 0.57,
+      "cash_flow_multiple": 2.72
+    },
+    {
+      "industry_sector": "Plumbing Businesses",
+      "revenue_multiple": 0.63,
+      "cash_flow_multiple": 2.47
+    },
+    {
+      "industry_sector": "Magazines and Newspapers",
+      "revenue_multiple": 0.67,
+      "cash_flow_multiple": 2.09
+    },
+    {
+      "industry_sector": "Production Companies",
+      "revenue_multiple": 0.89,
+      "cash_flow_multiple": 2.7
+    },
+    {
+      "industry_sector": "Day Care and Child Care Centers",
+      "revenue_multiple": 0.88,
+      "cash_flow_multiple": 3.32
+    },
+    {
+      "industry_sector": "Preschools",
+      "revenue_multiple": 0.93,
+      "cash_flow_multiple": 3.27
+    },
+    {
+      "industry_sector": "Schools",
+      "revenue_multiple": 0.71,
+      "cash_flow_multiple": 2.43
+    },
+    {
+      "industry_sector": "Art Galleries",
+      "revenue_multiple": 0.57,
+      "cash_flow_multiple": 1.96
+    },
+    {
+      "industry_sector": "Banquet Halls",
+      "revenue_multiple": 1.14,
+      "cash_flow_multiple": 3.34
+    },
+    {
+      "industry_sector": "Bowling Alleys",
+      "revenue_multiple": 0.73,
+      "cash_flow_multiple": 3.68
+    },
+    {
+      "industry_sector": "Casinos",
+      "revenue_multiple": 0.87,
+      "cash_flow_multiple": 2.32
+    },
+    {
+      "industry_sector": "Golf Courses and Services",
+      "revenue_multiple": 0.71,
+      "cash_flow_multiple": 2.78
+    },
+    {
+      "industry_sector": "Marinas and Fishing",
+      "revenue_multiple": 0.95,
+      "cash_flow_multiple": 2.96
+    },
+    {
+      "industry_sector": "Nightclubs and Theaters",
+      "revenue_multiple": 0.67,
+      "cash_flow_multiple": 3.25
+    },
+    {
+      "industry_sector": "Accounting and Tax Practices",
+      "revenue_multiple": 1.04,
+      "cash_flow_multiple": 2.19
+    },
+    {
+      "industry_sector": "Banking and Loan Businesses",
+      "revenue_multiple": 0.89,
+      "cash_flow_multiple": 2.68
+    },
+    {
+      "industry_sector": "Check Cashing Businesses",
+      "revenue_multiple": 0.79,
+      "cash_flow_multiple": 1.7
+    },
+    {
+      "industry_sector": "Financial Services Businesses",
+      "revenue_multiple": 1.22,
+      "cash_flow_multiple": 2.9
+    },
+    {
+      "industry_sector": "Insurance Agencies",
+      "revenue_multiple": 1.51,
+      "cash_flow_multiple": 2.89
+    },
+    {
+      "industry_sector": "Bakeries",
+      "revenue_multiple": 0.48,
+      "cash_flow_multiple": 2.19
+    },
+    {
+      "industry_sector": "Bars, Pubs and Taverns",
+      "revenue_multiple": 0.49,
+      "cash_flow_multiple": 2.64
+    },
+    {
+      "industry_sector": "Breweries",
+      "revenue_multiple": 0.58,
+      "cash_flow_multiple": 3.58
+    },
+    {
+      "industry_sector": "Coffee Shops and Cafes",
+      "revenue_multiple": 0.45,
+      "cash_flow_multiple": 2.14
+    },
+    {
+      "industry_sector": "Donut Shops",
+      "revenue_multiple": 0.66,
+      "cash_flow_multiple": 2.4
+    },
+    {
+      "industry_sector": "Food Trucks",
+      "revenue_multiple": 0.63,
+      "cash_flow_multiple": 1.69
+    },
+    {
+      "industry_sector": "Ice Cream and Frozen Yogurt Shops",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.38
+    },
+    {
+      "industry_sector": "Juice Bars",
+      "revenue_multiple": 0.41,
+      "cash_flow_multiple": 1.97
+    },
+    {
+      "industry_sector": "Restaurants",
+      "revenue_multiple": 0.38,
+      "cash_flow_multiple": 2.08
+    },
+    {
+      "industry_sector": "Assisted Living and Nursing Homes",
+      "revenue_multiple": 1.4,
+      "cash_flow_multiple": 4.42
+    },
+    {
+      "industry_sector": "Dance, Pilates, and Yoga Studios",
+      "revenue_multiple": 0.6,
+      "cash_flow_multiple": 1.91
+    },
+    {
+      "industry_sector": "Dental Practices",
+      "revenue_multiple": 0.7,
+      "cash_flow_multiple": 2.36
+    },
+    {
+      "industry_sector": "Gyms and Fitness Centers",
+      "revenue_multiple": 0.65,
+      "cash_flow_multiple": 2.41
+    },
+    {
+      "industry_sector": "Home Health Care Businesses",
+      "revenue_multiple": 0.62,
+      "cash_flow_multiple": 3.0
+    },
+    {
+      "industry_sector": "Medical Practices",
+      "revenue_multiple": 0.73,
+      "cash_flow_multiple": 2.17
+    },
+    {
+      "industry_sector": "Auto, Boat and Aircraft Manufacturers",
+      "revenue_multiple": 0.71,
+      "cash_flow_multiple": 3.25
+    },
+    {
+      "industry_sector": "Chemical and Related Product Manufacturers",
+      "revenue_multiple": 1.02,
+      "cash_flow_multiple": 3.47
+    },
+    {
+      "industry_sector": "Clothing and Fabric Manufacturers",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.58
+    },
+    {
+      "industry_sector": "Electronic and Electrical Equipment Manufacturers",
+      "revenue_multiple": 0.78,
+      "cash_flow_multiple": 3.04
+    },
+    {
+      "industry_sector": "Food and Related Product Manufacturers",
+      "revenue_multiple": 0.69,
+      "cash_flow_multiple": 2.74
+    },
+    {
+      "industry_sector": "Furniture and Fixture Manufacturers",
+      "revenue_multiple": 0.59,
+      "cash_flow_multiple": 2.69
+    },
+    {
+      "industry_sector": "Glass, Stone, and Concrete Manufacturers",
+      "revenue_multiple": 0.66,
+      "cash_flow_multiple": 2.74
+    },
+    {
+      "industry_sector": "Industrial and Commercial Machinery Manufacturers",
+      "revenue_multiple": 0.77,
+      "cash_flow_multiple": 3.51
+    },
+    {
+      "industry_sector": "Lumber and Wood Products Manufacturers",
+      "revenue_multiple": 0.63,
+      "cash_flow_multiple": 3.19
+    },
+    {
+      "industry_sector": "Machine Shops and Tool Manufacturers",
+      "revenue_multiple": 0.82,
+      "cash_flow_multiple": 3.23
+    },
+    {
+      "industry_sector": "Medical Device and Product Manufacturers",
+      "revenue_multiple": 0.75,
+      "cash_flow_multiple": 2.52
+    },
+    {
+      "industry_sector": "Metal Product Manufacturers",
+      "revenue_multiple": 0.73,
+      "cash_flow_multiple": 3.06
+    },
+    {
+      "industry_sector": "Packaging Businesses",
+      "revenue_multiple": 0.76,
+      "cash_flow_multiple": 3.18
+    },
+    {
+      "industry_sector": "Paper Manufacturers and Printing Businesses",
+      "revenue_multiple": 0.56,
+      "cash_flow_multiple": 2.46
+    },
+    {
+      "industry_sector": "Rubber and Plastic Products Manufacturers",
+      "revenue_multiple": 0.91,
+      "cash_flow_multiple": 3.6
+    },
+    {
+      "industry_sector": "Sign Manufacturers and Businesses",
+      "revenue_multiple": 0.65,
+      "cash_flow_multiple": 2.42
+    },
+    {
+      "industry_sector": "Cell Phone and Computer Repair and Service Businesses",
+      "revenue_multiple": 0.46,
+      "cash_flow_multiple": 1.93
+    },
+    {
+      "industry_sector": "Graphic and Web Design Businesses",
+      "revenue_multiple": 1.09,
+      "cash_flow_multiple": 2.75
+    },
+    {
+      "industry_sector": "IT and Software Service Businesses",
+      "revenue_multiple": 0.95,
+      "cash_flow_multiple": 2.97
+    },
+    {
+      "industry_sector": "Software and App Companies",
+      "revenue_multiple": 1.67,
+      "cash_flow_multiple": 3.25
+    },
+    {
+      "industry_sector": "Websites and Ecommerce Businesses",
+      "revenue_multiple": 1.1,
+      "cash_flow_multiple": 3.29
+    },
+    {
+      "industry_sector": "Dog Daycare and Boarding Businesses",
+      "revenue_multiple": 1.08,
+      "cash_flow_multiple": 3.11
+    },
+    {
+      "industry_sector": "Pet Grooming Businesses",
+      "revenue_multiple": 0.6,
+      "cash_flow_multiple": 2.11
+    },
+    {
+      "industry_sector": "Pet Stores and Supply Businesses",
+      "revenue_multiple": 0.44,
+      "cash_flow_multiple": 2.44
+    },
+    {
+      "industry_sector": "Bike Shops",
+      "revenue_multiple": 0.43,
+      "cash_flow_multiple": 2.62
+    },
+    {
+      "industry_sector": "Clothing and Accessory Stores",
+      "revenue_multiple": 0.49,
+      "cash_flow_multiple": 2.27
+    },
+    {
+      "industry_sector": "Convenience Stores",
+      "revenue_multiple": 0.38,
+      "cash_flow_multiple": 2.26
+    },
+    {
+      "industry_sector": "Dollar Stores",
+      "revenue_multiple": 0.34,
+      "cash_flow_multiple": 1.37
+    },
+    {
+      "industry_sector": "Flower Shops",
+      "revenue_multiple": 0.45,
+      "cash_flow_multiple": 1.94
+    },
+    {
+      "industry_sector": "Furniture and Furnishings Stores",
+      "revenue_multiple": 0.53,
+      "cash_flow_multiple": 2.55
+    },
+    {
+      "industry_sector": "Grocery Stores and Supermarkets",
+      "revenue_multiple": 0.33,
+      "cash_flow_multiple": 2.64
+    },
+    {
+      "industry_sector": "Health Food and Nutrition Businesses",
+      "revenue_multiple": 0.52,
+      "cash_flow_multiple": 2.14
+    },
+    {
+      "industry_sector": "Jewelry Stores",
+      "revenue_multiple": 0.52,
+      "cash_flow_multiple": 2.0
+    },
+    {
+      "industry_sector": "Liquor Stores",
+      "revenue_multiple": 0.46,
+      "cash_flow_multiple": 3.09
+    },
+    {
+      "industry_sector": "Nursery and Garden Centers",
+      "revenue_multiple": 0.57,
+      "cash_flow_multiple": 2.85
+    },
+    {
+      "industry_sector": "Pawn Shops",
+      "revenue_multiple": 0.93,
+      "cash_flow_multiple": 2.56
+    },
+    {
+      "industry_sector": "Pharmacies",
+      "revenue_multiple": 0.38,
+      "cash_flow_multiple": 2.57
+    },
+    {
+      "industry_sector": "Smoke Shops",
+      "revenue_multiple": 0.44,
+      "cash_flow_multiple": 1.83
+    },
+    {
+      "industry_sector": "Vending Machine Businesses",
+      "revenue_multiple": 1.13,
+      "cash_flow_multiple": 2.36
+    },
+    {
+      "industry_sector": "Architecture and Engineering Firms",
+      "revenue_multiple": 0.78,
+      "cash_flow_multiple": 2.66
+    },
+    {
+      "industry_sector": "Catering Companies",
+      "revenue_multiple": 0.43,
+      "cash_flow_multiple": 2.0
+    },
+    {
+      "industry_sector": "Cleaning Businesses",
+      "revenue_multiple": 0.67,
+      "cash_flow_multiple": 2.11
+    },
+    {
+      "industry_sector": "Commercial Laundry Businesses",
+      "revenue_multiple": 1.21,
+      "cash_flow_multiple": 2.75
+    },
+    {
+      "industry_sector": "Dry Cleaners",
+      "revenue_multiple": 0.72,
+      "cash_flow_multiple": 2.05
+    },
+    {
+      "industry_sector": "Funeral Homes",
+      "revenue_multiple": 1.7,
+      "cash_flow_multiple": 4.3
+    },
+    {
+      "industry_sector": "Landscaping and Yard Service Businesses",
+      "revenue_multiple": 0.68,
+      "cash_flow_multiple": 2.38
+    },
+    {
+      "industry_sector": "Laundromats and Coin Laundry Businesses",
+      "revenue_multiple": 1.23,
+      "cash_flow_multiple": 3.4
+    },
+    {
+      "industry_sector": "Legal Services and Law Firms",
+      "revenue_multiple": 0.7,
+      "cash_flow_multiple": 1.84
+    },
+    {
+      "industry_sector": "Locksmith Businesses",
+      "revenue_multiple": 0.66,
+      "cash_flow_multiple": 2.3
+    },
+    {
+      "industry_sector": "Medical Billing Businesses",
+      "revenue_multiple": 1.25,
+      "cash_flow_multiple": 3.43
+    },
+    {
+      "industry_sector": "Pest Control Businesses",
+      "revenue_multiple": 0.94,
+      "cash_flow_multiple": 2.42
+    },
+    {
+      "industry_sector": "Property Management Businesses",
+      "revenue_multiple": 0.92,
+      "cash_flow_multiple": 2.65
+    },
+    {
+      "industry_sector": "Security Businesses",
+      "revenue_multiple": 0.77,
+      "cash_flow_multiple": 2.61
+    },
+    {
+      "industry_sector": "Staffing Agencies",
+      "revenue_multiple": 0.62,
+      "cash_flow_multiple": 2.76
+    },
+    {
+      "industry_sector": "Waste Management and Recycling Businesses",
+      "revenue_multiple": 0.99,
+      "cash_flow_multiple": 3.24
+    },
+    {
+      "industry_sector": "Delivery, Freight and Service Routes",
+      "revenue_multiple": 0.6,
+      "cash_flow_multiple": 1.86
+    },
+    {
+      "industry_sector": "Limo and Passenger Transportation Businesses",
+      "revenue_multiple": 0.78,
+      "cash_flow_multiple": 2.47
+    },
+    {
+      "industry_sector": "Moving and Shipping Businesses",
+      "revenue_multiple": 0.65,
+      "cash_flow_multiple": 2.5
+    },
+    {
+      "industry_sector": "Storage Facilities and Warehouses",
+      "revenue_multiple": 0.86,
+      "cash_flow_multiple": 2.81
+    },
+    {
+      "industry_sector": "Trucking Companies",
+      "revenue_multiple": 0.64,
+      "cash_flow_multiple": 3.01
+    },
+    {
+      "industry_sector": "Durable Goods Wholesalers and Distributors",
+      "revenue_multiple": 0.54,
+      "cash_flow_multiple": 2.86
+    },
+    {
+      "industry_sector": "Nondurable Goods Wholesalers and Distributors",
+      "revenue_multiple": 0.51,
+      "cash_flow_multiple": 2.91
+    }
+  ]
+}
