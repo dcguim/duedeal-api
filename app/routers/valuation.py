@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 
 router = APIRouter(
     prefix="/valuation",
-    tags=["valutaion"]
+    tags=["valuation"]
 )
 
 multiples_file_path = 'app/routers/multiples.json'
