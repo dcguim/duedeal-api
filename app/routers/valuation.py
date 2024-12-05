@@ -1,6 +1,7 @@
 import json
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+from sqlalchemy import create_engine
 from app.model.users import Waitlist
 from email_validator import validate_email, EmailNotValidError
 
