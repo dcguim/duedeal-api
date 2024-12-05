@@ -1,6 +1,8 @@
 import json
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+from app.model.users import Waitlist
+from email_validator import validate_email, EmailNotValidError
 
 router = APIRouter(
     prefix="/valuation",
@@ -28,7 +30,7 @@ async def get_industries():
     return JSONResponse(status_code=200, content=response_mult)
     
 @router.get("/get-broad-valuation/")
-async def check_industry(industry: str, revenue: float, cashflow: float):
+async def generate_broad_valuation(industry: str, revenue: float, cashflow: float):
     # Load the JSON file
     mult = load_multiples()
     print(industry)
@@ -42,3 +44,31 @@ async def check_industry(industry: str, revenue: float, cashflow: float):
              response_broadval = {'broad_valuation': {'lower_bound': lower_bound,
                                                       'upper_bound': upper_bound}}
              return JSONResponse(status_code=200, content=response_broadval)
+
+@router.post("/subscribe-waitlist/")
+async def subscribe_waitlist(email: str):
+    try:
+        validate_email(email)
+    except EmailNotValidError as e:
+        return JSONResponse(content={"error": str(e)}, status_code=400)
+
+    engine = create_engine('sqlite:///waitlist.db')
+    Session = sessionmaker(bind=engine) 
+    with Session() as session:
+        new_user = Waitlist(email=email)
+        session.add(new_user)
+        # Insert the validated email into the database
+
+        existing_user = session.query(Waitlist).filter(Waitlist.email == email).first()
+        if existing_user:
+            return JSONResponse(content={"error": "Email already exists."}, status_code=400)
+
+        # Insert the new email into the database
+        new_user = Waitlist(email=email)
+        session.add(new_user)
+        try:
+            session.commit()
+            return JSONResponse(content={"message": "User added successfully!"}, status_code=201)
+        except Exception as e:
+            session.rollback()
+            return JSONResponse(content={"error": f"Unexpected error: {e}"}, status_code=500)
