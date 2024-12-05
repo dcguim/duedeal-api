@@ -54,7 +54,7 @@ async def subscribe_waitlist(email: str):
     except EmailNotValidError as e:
         return JSONResponse(content={"error": str(e)}, status_code=400)
 
-    engine = create_engine('sqlite:///waitlist.db')
+    engine = create_engine('sqlite:///duedeal.db')
     Session = sessionmaker(bind=engine) 
     with Session() as session:
         new_user = Waitlist(email=email)
