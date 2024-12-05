@@ -55,6 +55,11 @@ async def subscribe_waitlist(email: str):
         return JSONResponse(content={"error": str(e)}, status_code=400)
 
     engine = create_engine('sqlite:///duedeal.db')
+    from sqlalchemy import inspect
+    
+    inspector = inspect(engine)
+    print(inspector.get_table_names())
+    
     Session = sessionmaker(bind=engine) 
     with Session() as session:
         new_user = Waitlist(email=email)
