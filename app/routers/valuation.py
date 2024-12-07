@@ -62,11 +62,8 @@ async def subscribe_waitlist(email: str):
     
     Session = sessionmaker(bind=engine) 
     with Session() as session:
-        new_user = Waitlist(email=email)
-        session.add(new_user)
-        # Insert the validated email into the database
-
         existing_user = session.query(Waitlist).filter(Waitlist.email == email).first()
+
         if existing_user:
             return JSONResponse(content={"error": "Email already exists."}, status_code=400)
 
