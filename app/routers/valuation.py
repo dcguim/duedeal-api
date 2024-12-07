@@ -54,7 +54,7 @@ async def subscribe_waitlist(email: str):
     except EmailNotValidError as e:
         return JSONResponse(content={"error": str(e)}, status_code=400)
 
-    engine = create_engine('sqlite:////home/ubuntu/duedeal-apiduedeal.db')
+    engine = create_engine('sqlite:////home/ubuntu/duedeal.db')
     from sqlalchemy import inspect
     
     inspector = inspect(engine)
