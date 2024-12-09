@@ -1,0 +1,150 @@
+{
+  "Automotive and Transportation": [
+    "Auto Repair and Service Shops",
+    "Car Dealerships",
+    "Car Washes",
+    "Equipment Rental and Dealers",
+    "Gas Stations",
+    "Junk and Salvage Yards",
+    "Marine/Boat Service and Dealers",
+    "Towing Companies",
+    "Truck Stops",
+    "Limo and Passenger Transportation Businesses",
+    "Moving and Shipping Businesses",
+    "Storage Facilities and Warehouses",
+    "Trucking Companies"
+  ],
+  "Manufacturing and Industrial": [
+    "Auto, Boat, and Aircraft Manufacturers",
+    "Chemical and Related Product Manufacturers",
+    "Clothing and Fabric Manufacturers",
+    "Electronic and Electrical Equipment Manufacturers",
+    "Food and Related Product Manufacturers",
+    "Furniture and Fixture Manufacturers",
+    "Glass, Stone, and Concrete Manufacturers",
+    "Industrial and Commercial Machinery Manufacturers",
+    "Lumber and Wood Products Manufacturers",
+    "Machine Shops and Tool Manufacturers",
+    "Medical Device and Product Manufacturers",
+    "Metal Product Manufacturers",
+    "Packaging Businesses",
+    "Paper Manufacturers and Printing Businesses",
+    "Rubber and Plastic Products Manufacturers",
+    "Sign Manufacturers and Businesses",
+    "Production Companies"
+  ],
+  "Beauty and Wellness": [
+    "Hair Salons and Barber Shops",
+    "Massage Businesses",
+    "Nail Salons",
+    "Spas",
+    "Tanning Salons",
+    "Dance, Pilates, and Yoga Studios",
+    "Gyms and Fitness Centers"
+  ],
+  "Health and Medical Services": [
+    "Assisted Living and Nursing Homes",
+    "Dental Practices",
+    "Home Health Care Businesses",
+    "Medical Practices"
+  ],
+  "Food and Beverage": [
+    "Bakeries",
+    "Breweries",
+    "Coffee Shops and Cafes",
+    "Donut Shops",
+    "Food Trucks",
+    "Ice Cream and Frozen Yogurt Shops",
+    "Juice Bars",
+    "Restaurants",
+    "Catering Companies"
+  ],
+  "Retail and E-commerce": [
+    "Bike Shops",
+    "Clothing and Accessory Stores",
+    "Convenience Stores",
+    "Dollar Stores",
+    "Flower Shops",
+    "Furniture and Furnishings Stores",
+    "Grocery Stores and Supermarkets",
+    "Health Food and Nutrition Businesses",
+    "Jewelry Stores",
+    "Liquor Stores",
+    "Nursery and Garden Centers",
+    "Pawn Shops",
+    "Pharmacies",
+    "Smoke Shops",
+    "Vending Machine Businesses",
+    "Websites and Ecommerce Businesses",
+    "Magazines and Newspapers"
+  ],
+  "Construction, Contracting, and Landscaping": [
+    "Building Material and Hardware Stores",
+    "Concrete Businesses",
+    "Electrical and Mechanical Contracting Businesses",
+    "Heavy Construction Businesses",
+    "HVAC Businesses",
+    "Plumbing Businesses",
+    "Landscaping and Yard Service Businesses"
+  ],
+  "Logistics and Delivery": [
+    "Delivery, Freight, and Service Routes",
+    "Durable Goods Wholesalers and Distributors",
+    "Nondurable Goods Wholesalers and Distributors"
+  ],
+  "Entertainment and Recreation": [
+    "Bars, Pubs, and Taverns",
+    "Art Galleries",
+    "Banquet Halls",
+    "Bowling Alleys",
+    "Casinos",
+    "Golf Courses and Services",
+    "Marinas and Fishing",
+    "Nightclubs and Theaters"
+  ],
+  "Cleaning and Maintenance": [
+    "Cleaning Businesses",
+    "Commercial Laundry Businesses",
+    "Dry Cleaners",
+    "Pest Control Businesses",
+    "Locksmith Businesses"
+  ],
+  "Education and Childcare": [
+    "Day Care and Child Care Centers",
+    "Preschools",
+    "Schools"
+  ],
+  "Animal and Pet Services": [
+    "Dog Daycare and Boarding Businesses",
+    "Pet Grooming Businesses",
+    "Pet Stores and Supply Businesses"
+  ],
+  "Financial and Legal Services": [
+    "Accounting and Tax Practices",
+    "Banking and Loan Businesses",
+    "Check Cashing Businesses",
+    "Financial Services Businesses",
+    "Insurance Agencies",
+    "Legal Services and Law Firms",
+    "Medical Billing Businesses"
+  ],
+  "Technology and Software Services": [
+    "IT and Software Service Businesses",
+    "Software and App Companies",
+    "Graphic and Web Design Businesses"
+  ],
+  "Security and Property Services": [
+    "Architecture and Engineering Firms",
+    "Security Businesses",
+    "Property Management Businesses",
+    "Waste Management and Recycling Businesses"
+  ],
+  "Fitness and Lifestyle Services": [
+    "Dance, Pilates, and Yoga Studios",
+    "Gyms and Fitness Centers"
+  ],
+  "Specialty and Repair Services": [
+    "Cell Phone and Computer Repair and Service Businesses",
+    "Funeral Homes"
+  ]
+}

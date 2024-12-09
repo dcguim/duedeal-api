@@ -12,11 +12,12 @@ router = APIRouter(
 )
 
 multiples_file_path = 'app/routers/multiples.json'
+industries_file_path = 'app/routers/industries.json'
 
-def load_multiples():
+def load_json(path):
     try:
-        with open(multiples_file_path, "r") as mult:
-            return json.load(mult)
+        with open(path, "r") as fd:
+            return json.load(fd)
     except FileNotFoundError:
         raise HTTPException(status_code=500, detail="JSON file not found")
     except json.JSONDecodeError:
@@ -24,17 +25,13 @@ def load_multiples():
 
 @router.get("/get-industries/")
 async def get_industries():
-    mult = load_multiples()
-    industries = []
-    for ind_mult in mult['multiples-bizbuysell-11-24']:
-        industries.append(ind_mult['industry_sector'])
-    response_mult = {'industries': industries}
-    return JSONResponse(status_code=200, content=response_mult)
+    ind_json = load_json(industries_file_path)
+    return JSONResponse(status_code=200, content=json.loads(ind_json)
     
 @router.get("/get-broad-valuation/")
 async def generate_broad_valuation(industry: str, revenue: float, cashflow: float):
     # Load the JSON file
-    mult = load_multiples()
+    mult = load_json(multiples_file_path)
     print(industry)
     for ind_mult in mult['multiples-bizbuysell-11-24']:
         print(ind_mult['industry_sector'])
