@@ -26,7 +26,7 @@ def load_json(path):
 @router.get("/get-industries/")
 async def get_industries():
     ind_json = load_json(industries_file_path)
-    return JSONResponse(status_code=200, content=json.loads(ind_json))
+    return JSONResponse(status_code=200, content=ind_json)
     
 @router.get("/get-broad-valuation/")
 async def generate_broad_valuation(industry: str, revenue: float, cashflow: float):
