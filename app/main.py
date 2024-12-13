@@ -6,7 +6,8 @@ from fastapi.security import OAuth2PasswordBearer
 
 app = FastAPI()
 
-app.include_router(valuation.router)
+app.include_router(valuation.router, prefix="/user", tags=["valuation"])
+
 app.include_router(oauth.router)
 app.add_middleware(
     CORSMiddleware,

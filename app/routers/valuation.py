@@ -1,15 +1,12 @@
 import json
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import JSONResponse
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.model.users import Waitlist
 from email_validator import validate_email, EmailNotValidError
-
-router = APIRouter(
-    prefix="/valuation",
-    tags=["valuation"]
-)
+from app.utils.oauth_flow_manager import get_user_creds
+router = APIRouter()
 
 multiples_file_path = 'app/routers/multiples.json'
 industries_file_path = 'app/routers/industries.json'
@@ -24,7 +21,7 @@ def load_json(path):
         raise HTTPException(status_code=500, detail="Failed to parse JSON file")
 
 @router.get("/get-industries/")
-async def get_industries():
+async def get_industries(user_info: dict = Depends(get_user_creds)):
     ind_json = load_json(industries_file_path)
     return JSONResponse(status_code=200, content=ind_json)
     
