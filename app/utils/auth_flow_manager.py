@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from fastapi import HTTPException, status
 from fastapi import Depends, HTTPException, Security, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from datetime import datetime, timedelta
+import jwt
 import os
 
 load_dotenv()
@@ -76,3 +78,25 @@ async def get_user_creds(credentials: HTTPAuthorizationCredentials = Depends(htt
             detail="Could not validate credentials",
         )
     return token_info
+
+def create_jwt_access_token(data: dict):
+    """Create an access token."""
+    to_encode = data.copy()
+    expire = (datetime.utcnow()
+              + timedelta(minutes=load_dotenv("ACCESS_TOKEN_EXPIRE_MINUTES")))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode,
+                      load_dotenv("JWT_SECRET_KEY"),
+                      algorithm=load_dotenv("ALGORITHM"))
+
+def decode_jwt_token(token: str):
+    """Decode and validate a JWT token."""
+    try:
+        payload = jwt.decode(token,
+                             load_dotenv("JWT_SECRET_KEY"),
+                             algorithms=load_dotenv("ALGORITHM"))
+        return payload
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(status_code=401, detail="Token has expired")
+    except jwt.InvalidTokenError:
+        raise HTTPException(status_code=401, detail="Invalid token")

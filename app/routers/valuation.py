@@ -1,11 +1,9 @@
-import json
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import JSONResponse
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from app.model.users import Waitlist
-from email_validator import validate_email, EmailNotValidError
 from app.utils.oauth_flow_manager import get_user_creds
+from fastapi import HTTPException
+import json
+
 router = APIRouter()
 
 multiples_file_path = 'app/routers/multiples.json'
@@ -41,32 +39,3 @@ async def generate_broad_valuation(industry: str, revenue: float, cashflow: floa
                                                       'upper_bound': upper_bound}}
              return JSONResponse(status_code=200, content=response_broadval)
 
-@router.post("/subscribe-waitlist/")
-async def subscribe_waitlist(email: str):
-    try:
-        validate_email(email)
-    except EmailNotValidError as e:
-        return JSONResponse(content={"error": str(e)}, status_code=400)
-
-    engine = create_engine('sqlite:////home/ubuntu/duedeal.db')
-    from sqlalchemy import inspect
-    
-    inspector = inspect(engine)
-    print(inspector.get_table_names())
-    
-    Session = sessionmaker(bind=engine) 
-    with Session() as session:
-        existing_user = session.query(Waitlist).filter(Waitlist.email == email).first()
-
-        if existing_user:
-            return JSONResponse(content={"error": "Email already exists."}, status_code=400)
-
-        # Insert the new email into the database
-        new_user = Waitlist(email=email)
-        session.add(new_user)
-        try:
-            session.commit()
-            return JSONResponse(content={"message": "User added successfully!"}, status_code=201)
-        except Exception as e:
-            session.rollback()
-            return JSONResponse(content={"error": f"Unexpected error: {e}"}, status_code=500)
