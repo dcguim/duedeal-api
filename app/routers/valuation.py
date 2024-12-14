@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import JSONResponse
-from app.utils.oauth_flow_manager import get_user_creds
+from app.utils.auth_flow_manager import get_user_creds
 from fastapi import HTTPException
 import json
 
@@ -8,15 +8,6 @@ router = APIRouter()
 
 multiples_file_path = 'app/routers/multiples.json'
 industries_file_path = 'app/routers/industries.json'
-
-def load_json(path):
-    try:
-        with open(path, "r") as fd:
-            return json.load(fd)
-    except FileNotFoundError:
-        raise HTTPException(status_code=500, detail="JSON file not found")
-    except json.JSONDecodeError:
-        raise HTTPException(status_code=500, detail="Failed to parse JSON file")
 
 @router.get("/get-industries/")
 async def get_industries(user_info: dict = Depends(get_user_creds)):

@@ -1,7 +1,7 @@
 # routes/auth.py
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import JSONResponse, RedirectResponse
-from app.utils.oauth_flow_manager import GoogleOAuthFlow
+from app.utils.auth_flow_manager import GoogleOAuthFlow
 
 router = APIRouter(
     prefix="/oauth2",
