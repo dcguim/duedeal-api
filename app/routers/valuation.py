@@ -17,9 +17,7 @@ async def get_industries(creds: dict = Depends(authenticate_user)):
 async def generate_broad_valuation(industry: str, revenue: float, cashflow: float):
     # Load the JSON file
     mult = load_json(multiples_file_path)
-    print(industry)
     for ind_mult in mult['multiples-bizbuysell-11-24']:
-        print(ind_mult['industry_sector'])
         if industry.lower() == ind_mult['industry_sector'].lower():
              cashflow_mult = ind_mult["revenue_multiple"]*cashflow
              revenue_mult =  ind_mult["cash_flow_multiple"]*revenue

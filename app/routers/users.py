@@ -66,13 +66,13 @@ async def subscribe_waitlist(email: str,
                             status_code=500)
 
 
-#@router.post("/login")
-#def login_user(email: str, password: str,
-#               session: Session = Depends(get_sqlite_session)):
-#    """Login endpoint for non-Google users."""
-#    user = session.query(User).filter(User.email == email).first()
-#    if not user or not verify_password(password, user.password):
-#        raise HTTPException(status_code=400, detail="Invalid email or password")
-#
-#    access_token = create_jwt_access_token(data={"sub": user.email})
-#    return {"access_token": access_token}
+@router.post("/login")
+def login_user(email: str, password: str,
+               session: Session = Depends(get_sqlite_session)):
+    """Login endpoint for non-Google users."""
+    user = session.query(User).filter(User.email == email).first()
+    if not user or not verify_password(password, user.password):
+        raise HTTPException(status_code=400, detail="Invalid email or password")
+
+    access_token = create_jwt_access_token(data={"sub": user.email})
+    return {"access_token": access_token}

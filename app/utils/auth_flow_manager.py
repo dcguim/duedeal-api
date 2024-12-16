@@ -48,9 +48,8 @@ async def validate_google_access_token(access_token: str):
     Validate the Google access token with Google's /tokeninfo endpoint.
     """
     url = f"https://www.googleapis.com/oauth2/v3/tokeninfo?access_token={access_token}"
-    response = requests.get(url)
-#    async with httpx.AsyncClient() as client:
-#        response = await client.get(url)
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
 
     if response.status_code != 200:
         raise HTTPException(
@@ -64,11 +63,11 @@ def create_jwt_access_token(data: dict):
     """Create an access token."""
     to_encode = data.copy()
     expire = (datetime.utcnow()
-              + timedelta(minutes=load_dotenv("ACCESS_TOKEN_EXPIRE_MINUTES")))
+              + timedelta(minutes=int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))))
     to_encode.update({"exp": expire})
     return jwt.encode(to_encode,
-                      load_dotenv("JWT_SECRET_KEY"),
-                      algorithm=load_dotenv("ALGORITHM"))
+                      os.getenv("JWT_SECRET_KEY"),
+                      algorithm=os.getenv("ALGORITHM"))
 
 def decode_jwt_token(token: str):
     """Decode and validate a JWT token."""
