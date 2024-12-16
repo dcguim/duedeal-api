@@ -73,8 +73,8 @@ def decode_jwt_token(token: str):
     """Decode and validate a JWT token."""
     try:
         payload = jwt.decode(token,
-                             load_dotenv("JWT_SECRET_KEY"),
-                             algorithms=load_dotenv("ALGORITHM"))
+                             os.getenv("JWT_SECRET_KEY"),
+                             algorithms=os.getenv("ALGORITHM"))
         return payload
     except jwt.ExpiredSignatureError:
         raise HTTPException(status_code=401, detail="Token has expired")
