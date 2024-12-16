@@ -1,8 +1,7 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
-from app.utils.auth_flow_manager import get_user_creds
-from fastapi import HTTPException
-import json
+from app.utils.auth_flow_manager import authenticate_user
+from app.utils.misc import load_json
 
 router = APIRouter()
 
@@ -10,7 +9,7 @@ multiples_file_path = 'app/routers/multiples.json'
 industries_file_path = 'app/routers/industries.json'
 
 @router.get("/get-industries/")
-async def get_industries(user_info: dict = Depends(get_user_creds)):
+async def get_industries(creds: dict = Depends(authenticate_user)):
     ind_json = load_json(industries_file_path)
     return JSONResponse(status_code=200, content=ind_json)
     

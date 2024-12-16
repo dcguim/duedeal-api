@@ -1,9 +1,7 @@
 from google_auth_oauthlib.flow import Flow
-from google.oauth2 import id_token
-import requests
 from dotenv import load_dotenv
-from fastapi import HTTPException, status
-from fastapi import Depends, HTTPException, Security, status
+from fastapi import HTTPException, status, Depends
+import httpx
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from datetime import datetime, timedelta
 import jwt
@@ -47,37 +45,20 @@ class GoogleOAuthFlow:
 
 async def validate_google_access_token(access_token: str):
     """
-    Validate the access token with Google's tokeninfo endpoint
+    Validate the Google access token with Google's /tokeninfo endpoint.
     """
     url = f"https://www.googleapis.com/oauth2/v3/tokeninfo?access_token={access_token}"
     response = requests.get(url)
+#    async with httpx.AsyncClient() as client:
+#        response = await client.get(url)
+
     if response.status_code != 200:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired access token"
+            detail="Invalid or expired access token",
         )
-    token_info = response.json()
-    return token_info
 
-http_bearer = HTTPBearer()
-
-async def get_user_creds(credentials: HTTPAuthorizationCredentials = Depends(http_bearer)):
-    """
-    Utility function for extracting the credentials and ensuring bearer
-    """
-    if credentials.scheme != "Bearer":
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Only 'Bearer' authentication scheme is supported",
-        )
-    token = credentials.credentials  # Extract the Bearer token
-    token_info = await validate_google_access_token(token)
-    if not token_info:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Could not validate credentials",
-        )
-    return token_info
+    return response.json()
 
 def create_jwt_access_token(data: dict):
     """Create an access token."""
@@ -100,3 +81,35 @@ def decode_jwt_token(token: str):
         raise HTTPException(status_code=401, detail="Token has expired")
     except jwt.InvalidTokenError:
         raise HTTPException(status_code=401, detail="Invalid token")
+
+
+http_bearer = HTTPBearer()
+
+async def authenticate_user(credentials: HTTPAuthorizationCredentials = Depends(http_bearer)):
+    """
+    Authenticate a user via a Google access token or an internal JWT.
+    """
+    if credentials.scheme != "Bearer":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only 'Bearer' authentication scheme is supported",
+        )
+    token = credentials.credentials
+    # First, attempt Google access token validation
+    try:
+        google_user = await validate_google_access_token(token)
+        return {
+            "auth_type": "google",
+            "user_id": google_user["sub"],  # Google user ID
+            "email": google_user["email"],
+        }
+    except HTTPException:
+        pass  # If Google validation fails, fall back to internal JWT
+
+    # Attempt internal JWT validation
+    payload = decode_jwt_token(token)
+    return {
+        "auth_type": "internal",
+        "user_id": payload.get("sub"),  # Internal user ID
+        "email": payload.get("email"),
+    }

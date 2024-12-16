@@ -4,8 +4,8 @@ from app.model.users import Waitlist, User
 from email_validator import validate_email, EmailNotValidError
 from fastapi.responses import JSONResponse
 from fastapi import HTTPException, Depends, APIRouter
-from app.utils.misc import get_sqlite_session, hash_password
-
+from app.utils.misc import get_sqlite_session, hash_password, verify_password
+from app.utils.auth_flow_manager import create_jwt_access_token
 router = APIRouter()
 
 @router.post("/signup")
@@ -41,7 +41,8 @@ def signup_user(
     return {"message": "User signed up successfully", "user_email": new_user.email}
 
 @router.post("/subscribe-waitlist/")
-async def subscribe_waitlist(email: str, session: Session=Depends(get_sqlite_session)):
+async def subscribe_waitlist(email: str,
+                             session: Session=Depends(get_sqlite_session)):
     try:
         validate_email(email)
     except EmailNotValidError as e:
@@ -65,3 +66,13 @@ async def subscribe_waitlist(email: str, session: Session=Depends(get_sqlite_ses
                             status_code=500)
 
 
+#@router.post("/login")
+#def login_user(email: str, password: str,
+#               session: Session = Depends(get_sqlite_session)):
+#    """Login endpoint for non-Google users."""
+#    user = session.query(User).filter(User.email == email).first()
+#    if not user or not verify_password(password, user.password):
+#        raise HTTPException(status_code=400, detail="Invalid email or password")
+#
+#    access_token = create_jwt_access_token(data={"sub": user.email})
+#    return {"access_token": access_token}
