@@ -76,3 +76,28 @@ def login_user(email: str, password: str,
 
     access_token = create_jwt_access_token(data={"sub": user.email})
     return {"access_token": access_token}
+
+@router.post("/change-password")
+def change_password(email: str,
+                    new_password: str,
+                    session: Session = Depends(get_sqlite_session)):
+    # Retrieve the user by email
+    user = session.query(User).filter(User.email == email).first()
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail="User not found")
+    
+    # Hash the new password
+    hashed_password = hash_password(new_password)
+    
+    # Update the user's password
+    user.password = hashed_password
+    try:
+        session.commit()
+        return JSONResponse(content={"message": "Password updated successfully"},
+                        status_code=201)
+    except Exception as e:
+        session.rollback()
+        return JSONResponse(content={"error": f"Unexpected error: {e}"},
+                            status_code=500)
